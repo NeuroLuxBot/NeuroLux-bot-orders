@@ -146,8 +146,12 @@ async def handle_message(update: Update, context: ContextTypes.DEFAULT_TYPE):
 
 # === Запуск приложения ===
 def main():
-    TOKEN = os.getenv("BOT_TOKEN")
-    ADMIN_ID = os.getenv("ADMIN_ID")
+    TOKEN = os.getenv("8376825979:AAFH78HR6-vyFPzKpjIVkBclDr5Z1nrhft8
+
+
+
+")
+    ADMIN_ID = os.getenv("1109982512")
 
     if not TOKEN or not ADMIN_ID:
         logger.error("Не заданы переменные окружения BOT_TOKEN или ADMIN_ID")
