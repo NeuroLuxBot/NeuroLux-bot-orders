@@ -14,7 +14,7 @@ logging.basicConfig(
 logger = logging.getLogger(__name__)
 
 # === Хранение данных ===
-DATA_FILE = "orders.json"
+DATA_FILE = "orders_orders.json"
 
 def load_orders() -> dict:
     try:
@@ -102,7 +102,7 @@ async def handle_message(update: Update, context: ContextTypes.DEFAULT_TYPE):
             orders[str(user_id)] = user_orders
             save_orders(orders)
 
-            total_requests = increment_counter()
+            total_requests = increment_counter("counter_orders.txt")
             print(f"[DEBUG] total_requests: {total_requests}")
 
             await update.message.reply_text("✅ Спасибо! В течение 20 минут с вами свяжется наш менеджер.")
